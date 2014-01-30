@@ -1,0 +1,53 @@
+﻿@model IEnumerable<AspNetDatabases.Models.CdDb>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@Html.ActionLink("Search", "SearchIndex")
+<table>
+    <tr>
+        
+        <th>
+            Action
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Artist)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RecordLabel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RecordYear)
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { ID = item.ID })
+                @Html.ActionLink("Details", "Details", new { ID = item.ID })
+                @Html.ActionLink("Delete", "Delete", new { ID = item.ID })
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Artist)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.RecordLabel)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.RecordYear)
+            </td>
+        </tr>
+    }
+</table>
+ 
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>

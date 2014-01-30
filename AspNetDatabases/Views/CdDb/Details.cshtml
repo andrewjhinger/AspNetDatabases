@@ -1,0 +1,43 @@
+﻿@model AspNetDatabases.Models.CdDb
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>CdDb</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Title)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Title)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Artist)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Artist)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RecordLabel)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RecordLabel)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RecordYear)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RecordYear)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
